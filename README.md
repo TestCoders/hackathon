@@ -1,5 +1,9 @@
 # TestCoders Hackathon
 
+📖 **Documentatie: <https://testcoders.github.io/hackathon/>**
+
+> De site gaat live zodra GitHub Pages is ingeschakeld onder **Settings → Pages → Source: GitHub Actions**. Tot die tijd draai je de docs lokaal met `npm run docs:dev`.
+
 Documentatiesite met alle onderwerpen voor de TestCoders hackathon. Elk onderwerp is uitgewerkt als **MVP** volgens één vast template, zodat teams van tevoren weten wat ze bouwen en wanneer het af is.
 
 Gebouwd met [VitePress](https://vitepress.dev). Alle content is Nederlandstalig.
