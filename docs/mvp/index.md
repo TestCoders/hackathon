@@ -13,11 +13,12 @@ Gereedschap dat testers en developers direct in hun dagelijkse werk kunnen gebru
 
 | Onderwerp | Waar het over gaat |
 |-----------|--------------------|
-| [Coding guidelines voor AI](/mvp/testing-toolbox/coding-guidelines-ai) | Machine-leesbare afspraken zodat AI-agenten code schrijven in TestCoders-stijl |
-| [Set aan AI-skills](/mvp/testing-toolbox/ai-skills-set) | Herbruikbare skills voor code review, refinement, testgeneratie, bugfixes en implementatie |
+| [Coding guidelines + AI-skills](/mvp/testing-toolbox/ai-skills-set) | Machine-leesbare guidelines als fundament onder skills voor code review, testgeneratie en bugfixes |
 | [Browser plugin voor locators](/mvp/testing-toolbox/browser-plugin-locators) | Browserextensie die stabiele locators genereert en naar je clipboard schrijft |
-| [Testdatagenerator](/mvp/testing-toolbox/testdatagenerator) | Realistische, geldige NL-testdata op basis van een schema |
-| [AI testpipeline / agent tool](/mvp/testing-toolbox/ai-testpipeline) | Agent die in CI faalanalyses doet en testonderhoud voorstelt |
+| [Testdatagenerator](/mvp/testing-toolbox/testdatagenerator) | Realistische, geldige NL-testdata op basis van een schema of een aangeleverd format |
+| [AI testpipeline / agent tool](/mvp/testing-toolbox/ai-testpipeline) | Keten van AI-skills die het testproces van ticket tot rapport structureert, herbruikbaar in elk project |
+
+**Samenhang:** testdatagenerator en browser-plugin leveren input voor de tests die de AI-testpipeline verwerkt. Bouw je meerdere van deze onderwerpen op dezelfde dag, spreek dan bij de kick-off een gedeeld voorbeeldproject af (zie [dagprogramma](/dagprogramma)).
 
 ## Iets bouwen voor TestCoders
 
@@ -27,9 +28,11 @@ Interne tooling en de eigen online aanwezigheid van TestCoders.
 |-----------|--------------------|
 | [Declaratie-app](/mvp/testcoders/declaratie-app) | Onkosten declareren vanaf je telefoon, met bonfoto en OCR |
 | [Website](/mvp/testcoders/website) | Nieuwe TestCoders-website met vacatures en kennisartikelen |
-| [Casus](/mvp/testcoders/casus) | Bibliotheek van klantcasussen als sales- en kennisinstrument |
+| [Casus](/mvp/testcoders/casus) | Interne technische instapopdracht voor sollicitanten, gemoderniseerd en AI-proof gemaakt |
 | [Uren](/mvp/testcoders/uren) | Urenregistratie die in seconden klaar is in plaats van minuten |
 | [AI-chatbot voor de website](/mvp/testcoders/ai-chatbot) | Chatbot die bezoekersvragen beantwoordt op basis van de eigen content |
+
+**Samenhang:** Declaratie-app en Uren delen dezelfde kern (medewerker, klant/opdracht, periode) — spreek bij parallelle teams één datamodel af. Website en AI-chatbot delen dezelfde contentbron — zet die vroeg op de dag vast.
 
 ## Framework from scratch
 
@@ -53,9 +56,7 @@ Niet bouwen maar breken: leren door bewust stuk te maken.
 
 | Onderwerp | Waar het over gaat |
 |-----------|--------------------|
-| [Break-it skills](/mvp/break-it/skills) | AI-skills die een applicatie systematisch aanvallen |
-| [Break-it tooltje](/mvp/break-it/tooltje) | Chaos-/fuzzing-tool die een draaiende applicatie onder druk zet |
-| [Break-it website](/mvp/break-it/website) | Bewust kwetsbare oefenwebsite met scoreboard |
+| [Break-it hackathon](/mvp/break-it) | Kwetsbare oefenwebsite, chaos-/fuzztool en break-skills in één samenhangend geheel |
 
 ## Overig
 

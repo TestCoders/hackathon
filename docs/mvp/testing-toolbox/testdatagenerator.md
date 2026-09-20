@@ -16,11 +16,12 @@ description: Genereer realistische, geldige Nederlandse testdata op basis van ee
 ## 2. Doelstelling
 
 ### Hoofddoel
-Een generator opleveren die op basis van een schema realistische en formeel geldige Nederlandse testdata produceert, zodat teams geen productiedata meer nodig hebben en geen tijd meer kwijt zijn aan het verzinnen van testgevallen.
+Een generator opleveren die realistische en formeel geldige Nederlandse testdata produceert die aansluit op het datamodel van eender welk project — of dat nu een eigen schema is, een export uit een bronsysteem of gemockte data — zodat teams geen productiedata meer nodig hebben en geen tijd meer kwijt zijn aan het verzinnen van testgevallen.
 
 ### Subdoelen
 - Minimaal **8 Nederlandse datatypes** ondersteunen: naam, adres met bestaande postcode-formaat, IBAN met correcte controlecijfers, BSN met elfproef, KvK-nummer, telefoonnummer, e-mailadres en geboortedatum.
 - Een **schema-gedreven** aanpak: je beschrijft je datamodel in JSON of YAML en krijgt records terug die daaraan voldoen.
+- **Format-aansluiting**: naast het eigen schemaformaat ook een aangeleverd voorbeeldrecord, CSV-header of veldenlijst uit een bestaand project herkennen en per veldnaam/type automatisch de juiste generator koppelen — zodat elk project, ongeacht hoe de eigen tabellen of bronsystemen zijn ingericht, zonder handmatig schema te schrijven bruikbare data terugkrijgt.
 - **Reproduceerbaarheid** via een seed: dezelfde seed geeft exact dezelfde dataset, zodat een falende test te reproduceren is.
 - Export naar minimaal **3 formaten**: JSON, CSV en SQL-inserts.
 - **1.000 records binnen 5 seconden** genereren op een gewone laptop.
@@ -61,6 +62,9 @@ Een generator opleveren die op basis van een schema realistische en formeel geld
 ✅ **Export naar JSON, CSV en SQL**
 - Eén commando levert het gewenste formaat op, klaar om te laden in database, mockserver of testframework.
 
+✅ **Aansluiten op een aangeleverd format**
+- Je levert een voorbeeldrecord, CSV-header of veldenlijst van je eigen project aan; de tool herkent per veld het type (naam, adres, IBAN, e-mail, ...) en vult het aan met echte-vorm data, in plaats van dat je eerst zelf een schema in het format van de tool moet schrijven.
+
 ---
 
 ## 5. Nice-to-Have
@@ -81,3 +85,4 @@ Een generator opleveren die op basis van een schema realistische en formeel geld
 - Dezelfde seed levert tweemaal een identieke dataset — live aangetoond.
 - Export naar JSON, CSV en SQL werkt; het SQL-bestand laadt zonder fouten in een lokale database.
 - De randgevallen-modus levert minimaal 5 herkenbaar lastige waarden op.
+- Bij een aangeleverd voorbeeldrecord of CSV-header van een fictief ander project herkent de tool minimaal 5 veldtypes automatisch en vult ze correct in.

@@ -5,6 +5,10 @@ description: Bouw vanaf nul een testrunner met assertions en rapportage voor HTT
 
 # API-testtool maken
 
+::: warning Geen bestaand testframework
+De kern — testregistratie, uitvoering, assertions en rapportage — schrijf je zelf. Een HTTP-client en een JSON-parser uit de standaardbibliotheek of als losse dependency zijn toegestaan; JUnit, pytest, Jest, RestAssured en vergelijkbare frameworks niet. Kies één taal en blijf erbij, en neem een publieke test-API als doelwit zodat je niet ook nog een backend hoeft te bouwen.
+:::
+
 ## 1. Projectnaamsvermelding
 **Naam:** API-testtool from scratch
 **Versie:** MVP 1.0

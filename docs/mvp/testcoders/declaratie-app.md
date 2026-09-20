@@ -25,6 +25,7 @@ Een mobiele web-app opleveren waarmee een consultant een onkostendeclaratie indi
 - Goedkeuringsscherm waarin de backoffice een declaratie in **één klik** goedkeurt of afwijst, met verplichte reden bij afwijzing.
 - Export van goedgekeurde declaraties naar **CSV** voor de salarisadministratie.
 - Volledig bruikbaar op een telefoonscherm van **375px breed**.
+- Bestaande TestCoders-huisstijl aanhouden waar mogelijk, zodat de demo er meteen uitziet als TestCoders.
 
 ---
 

@@ -1,14 +1,12 @@
 ---
 title: AI testpipeline / agent tool
-description: Een AI-agent die in de CI-pipeline testfalen analyseert, oorzaken benoemt en fixes voorstelt.
+description: Een keten van AI-skills die het testproces van ticket tot rapport structureert, herbruikbaar in elk project.
 ---
 
 # AI testpipeline / agent tool
 
-*Geïnspireerd op de workshop van Tim Lolkema.*
-
 ## 1. Projectnaamsvermelding
-**Naam:** AI-agent in de testpipeline
+**Naam:** AI-testpipeline (skillketen)
 **Versie:** MVP 1.0
 **Datum:** [Datum]
 **Team:** [Namen van de deelnemers]
@@ -18,14 +16,14 @@ description: Een AI-agent die in de CI-pipeline testfalen analyseert, oorzaken b
 ## 2. Doelstelling
 
 ### Hoofddoel
-Een agent bouwen die automatisch meedraait in de CI-pipeline, gefaalde tests analyseert en per falen een onderbouwde diagnose plus een concreet fixvoorstel achterlaat, zodat de tijd tussen "build is rood" en "oorzaak bekend" van tientallen minuten naar minuten gaat.
+Een keten van vijf op zichzelf staande AI-skills opleveren die het testproces van los ticket tot afgerond testrapport structureert — ticketanalyse, testcasegeneratie, een advies over handmatig of automatisch uitvoeren, de uitvoering zelf inclusief nieuwe automatisering, en een rapportage — zodat handmatig en automatisch testwerk niet meer ad hoc verloopt maar een herhaalbare, uitlegbare volgorde volgt. De keten is bewust generiek opgezet, zodat hij op meerdere projecten en in meerdere teams te installeren en te gebruiken is.
 
 ### Subdoelen
-- De agent wordt **automatisch getriggerd** bij een gefaalde testrun in GitHub Actions, zonder handmatige actie.
-- Per gefaalde test een **classificatie** in minimaal 3 categorieën: echte bug, testfout of omgevings-/flaky-probleem.
-- Elke analyse bevat een **verwijzing naar bestand en regelnummer** en een voorgestelde wijziging in diff-vorm.
-- De resultaten worden teruggeplaatst als **comment op de pull request**, binnen **5 minuten** na het falen.
-- Op een geprepareerde set van **10 gefaalde tests** classificeert de agent er minimaal **7 correct**.
+- **5 losse skills** die elk zelfstandig aan te roepen zijn én na elkaar een keten vormen: de output van stap *N* is bruikbare input voor stap *N+1*.
+- Elke skill heeft een **eigen instructiebestand** met triggerwoorden en minimaal 1 uitgewerkt voorbeeld, in dezelfde opzet als de [set aan AI-skills](/mvp/testing-toolbox/ai-skills-set).
+- De keten is **herbruikbaar**: zonder aanpassing aan de skills zelf ook te draaien op een tweede, niet vooraf voorbereid ticket of project.
+- Skill 3 (handmatig/automatisch-advies) onderbouwt de keuze in één alinea, zodat die controleerbaar is.
+- Van ticket tot rapport voor een eenvoudig voorbeeldticket **binnen 15 minuten** doorlopen, inclusief toelichting per stap.
 
 ---
 
@@ -33,52 +31,51 @@ Een agent bouwen die automatisch meedraait in de CI-pipeline, gefaalde tests ana
 
 | Rol | Beschrijving | Belangrijkste Behoeften |
 |-----|--------------|--------------------------|
-| Test automation engineer | Onderhoudt de testsuite en de pipeline | Snel onderscheid tussen flaky test en echte regressie |
-| Developer met een rode PR | Wil weten of het aan zijn wijziging ligt | Directe, leesbare uitleg in de PR zelf; geen logbestanden spitten |
-| Tech lead | Bewaakt doorlooptijd en betrouwbaarheid van de pipeline | Inzicht in terugkerende faalpatronen en flaky tests |
-| DevOps engineer | Beheert de CI-omgeving | Analyse die omgevingsproblemen herkent en niet als codebug rapporteert |
+| Test automation engineer | Zet tickets om in test- en automatiseringswerk | Een vaste, herhaalbare volgorde in plaats van steeds opnieuw uitvinden waar te beginnen |
+| Handmatige tester | Voert het niet-geautomatiseerde deel uit | Duidelijk overzicht welke gevallen hij zelf moet uitvoeren en waarom |
+| Developer | Levert het ticket op waar getest tegen wordt | Snel zicht op wat getest is en wat er is gevonden |
+| Tech lead / PO | Bewaakt testdekking en voortgang | Eén leesbaar rapport per ticket in plaats van losse aantekeningen |
 
 ---
 
 ## 4. Kernfunctionaliteiten (Must-Have)
 
-### Voor de pipeline
-✅ **Automatische trigger bij testfalen**
-- Een workflow-stap draait alleen bij een gefaalde testrun en geeft de agent de testresultaten, logs en de diff van de PR mee.
+### De keten
+✅ **Skill 1 — Ticketanalyse**
+- Leest een ticket of user story, vat de scope samen en benoemt risicogebieden en acceptatiecriteria.
 
-✅ **Gestructureerde faalanalyse**
-- De agent leest het testrapport (JUnit XML of vergelijkbaar), haalt per falen de assertion, stacktrace en betrokken code op en vat samen wat er misging.
+✅ **Skill 2 — Testcasegeneratie**
+- Genereert vanuit de analyse een lijst testgevallen: happy path, randgevallen en foutscenario's.
 
-✅ **Classificatie van het falen**
-- Elk falen krijgt een label: echte bug, verouderde test, of omgevings-/timingprobleem, met de redenering erbij in één alinea.
+✅ **Skill 3 — Handmatig/automatisch-advies**
+- Beoordeelt per testgeval of het automatisch of handmatig uitgevoerd moet worden, met een onderbouwing op basis van stabiliteit, herhaalfrequentie en complexiteit.
 
-### Voor de developer
-✅ **Fixvoorstel in diff-vorm**
-- Per falen een concreet voorstel: welk bestand, welke regel, welke wijziging — kopieerbaar of direct toepasbaar.
+✅ **Skill 4 — Uitvoering en automatisering**
+- Voert de handmatige gevallen uit (of instrueert precies hoe) en genereert of vult nieuwe geautomatiseerde tests aan voor de gevallen die daarvoor zijn aangewezen.
 
-✅ **Rapportage in de pull request**
-- Eén samenvattende comment op de PR met een tabel van gefaalde tests, classificatie en link naar de details. Geen losse comments die de PR dichtslibben.
+✅ **Skill 5 — Rapportage**
+- Bundelt de resultaten van alle vorige stappen tot één leesbaar rapport: wat is getest, wat is gevonden, wat is er geautomatiseerd.
 
-✅ **Duidelijke grenzen**
-- De agent past niets zelf toe zonder goedkeuring en geeft expliciet aan wanneer hij het niet weet, in plaats van een plausibel klinkende gok te presenteren.
+### Voor herbruikbaarheid
+✅ **Gedeelde structuur en documentatie**
+- Alle 5 skills volgen dezelfde mapindeling en hebben een README met installatie-instructies, triggerwoorden en een voorbeeld van in- en output, zodat de keten in een ander project te installeren is zonder de skills zelf aan te passen.
 
 ---
 
 ## 5. Nice-to-Have
-- Automatisch een fix-branch met PR openen bij hoge zekerheid.
-- Flaky tests herkennen op basis van historie over meerdere runs.
-- Dashboard met faalpatronen over de tijd.
-- Screenshots en video's van UI-tests meenemen in de analyse.
-- Ondersteuning voor GitLab CI en Azure DevOps naast GitHub Actions.
-- Kostenbewaking met een limiet op tokengebruik per run.
+- De hele keten met één commando starten in plaats van 5 losse aanroepen.
+- Koppeling met een ticketsysteem (Jira e.d.) zodat de keten automatisch start zodra een ticket de juiste status krijgt.
+- Hergebruik van eerder gegenereerde testcases bij vergelijkbare tickets.
+- Een dashboard met automatiseringsgraad per team of periode.
+- Metrics over hoe vaak skill 3's advies afwijkt van wat een ervaren tester zou kiezen.
 
 ---
 
 ## 6. Succescriteria
 *Wat moet er aan het eind van de hackathon werkend zijn om het project als geslaagd te beschouwen?*
 
-- Een gefaalde testrun in een demo-repository triggert de agent automatisch.
-- Binnen 5 minuten staat er een leesbare analyse-comment op de pull request.
-- Op de geprepareerde set van 10 falen zit minimaal 7 keer de juiste classificatie.
-- Minimaal 1 fixvoorstel is ongewijzigd toe te passen en maakt de test groen — live gedemonstreerd.
-- De agent meldt expliciet "onvoldoende informatie" bij het geprepareerde onduidelijke geval, in plaats van te gokken.
+- Alle 5 skills draaien los, elk met minimaal 1 voorbeeld, live gedemonstreerd.
+- De volledige keten wordt live doorlopen op één voorbeeldticket: van ticket tot rapport, zonder handmatig tussenvoegen van context.
+- Dezelfde keten draait zonder aanpassing ook op een tweede, niet vooraf voorbereid ticket of project — toont de herbruikbaarheid.
+- Skill 3's advies komt bij minimaal 4 van de 5 voorbeeldgevallen overeen met wat een ervaren tester zou kiezen.
+- Skill 4 levert minimaal 1 nieuwe, werkende geautomatiseerde test op die aantoonbaar draait.

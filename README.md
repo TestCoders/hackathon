@@ -28,23 +28,23 @@ De site draait daarna op <http://localhost:5173/hackathon/>.
 Start hier:
 
 - [Introductie / homepage](docs/index.md) — hoe de hackathon werkt
+- [Dagprogramma](docs/dagprogramma.md) — tijdschema en afspraken voor de dag zelf
 - [MVP-overzicht](docs/mvp/index.md) — alle onderwerpen per categorie
 - [MVP-template](docs/template.md) — het lege template met invulinstructie
 - [Bijdragen](docs/bijdragen.md) — een onderwerp toevoegen of invullen
 
 ### Testing toolbox
 
-Gereedschap voor testers en developers. → [categorie-overzicht](docs/mvp/testing-toolbox/index.md)
+Gereedschap voor testers en developers.
 
-- [Coding guidelines voor AI](docs/mvp/testing-toolbox/coding-guidelines-ai.md)
-- [Set aan AI-skills](docs/mvp/testing-toolbox/ai-skills-set.md)
+- [Coding guidelines + AI-skills](docs/mvp/testing-toolbox/ai-skills-set.md)
 - [Browser plugin voor locators](docs/mvp/testing-toolbox/browser-plugin-locators.md)
 - [Testdatagenerator](docs/mvp/testing-toolbox/testdatagenerator.md)
 - [AI testpipeline / agent tool](docs/mvp/testing-toolbox/ai-testpipeline.md)
 
 ### Iets bouwen voor TestCoders
 
-Interne tooling en de eigen website. → [categorie-overzicht](docs/mvp/testcoders/index.md)
+Interne tooling en de eigen website.
 
 - [Declaratie-app](docs/mvp/testcoders/declaratie-app.md)
 - [Website](docs/mvp/testcoders/website.md)
@@ -54,27 +54,23 @@ Interne tooling en de eigen website. → [categorie-overzicht](docs/mvp/testcode
 
 ### Framework from scratch
 
-Zelf bouwen wat je normaal importeert. → [categorie-overzicht](docs/mvp/framework/index.md)
+Zelf bouwen wat je normaal importeert.
 
 - [API-testtool maken](docs/mvp/framework/api-testtool.md)
 
 ### Local LLM
 
-AI zonder dat data de organisatie verlaat. → [categorie-overzicht](docs/mvp/local-llm/index.md)
+AI zonder dat data de organisatie verlaat.
 
 - [Lokale codereview-LLM](docs/mvp/local-llm/lokale-codereview-llm.md)
 
 ### Break-it hackathon
 
-Niet bouwen maar breken. → [categorie-overzicht](docs/mvp/break-it/index.md)
+Niet bouwen maar breken.
 
-- [Break-it skills](docs/mvp/break-it/skills.md)
-- [Break-it tooltje](docs/mvp/break-it/tooltje.md)
-- [Break-it website](docs/mvp/break-it/website.md)
+- [Break-it hackathon](docs/mvp/break-it.md)
 
 ### Overig
-
-→ [categorie-overzicht](docs/mvp/overig/index.md)
 
 - [Tool shootout](docs/mvp/overig/tool-shootout.md)
 
@@ -84,15 +80,16 @@ Niet bouwen maar breken. → [categorie-overzicht](docs/mvp/break-it/index.md)
 docs/
   .vitepress/config.mts   navigatie, sidebar, thema
   index.md                homepage
+  dagprogramma.md         tijdschema en afspraken voor de hackathondag
   template.md             leeg MVP-template
   bijdragen.md            hoe je content toevoegt
   mvp/
-    index.md              overzicht van alle onderwerpen
-    testing-toolbox/      categorie + onderwerpen
+    index.md              overzicht van alle onderwerpen, per categorie
+    break-it.md            break-it als één samengevoegd MVP
+    testing-toolbox/      onderwerpen (geen aparte categoriepagina)
     testcoders/
     framework/
     local-llm/
-    break-it/
     overig/
 .github/workflows/deploy.yml   build en publicatie naar GitHub Pages
 ```

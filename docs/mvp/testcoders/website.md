@@ -25,6 +25,7 @@ Een nieuwe, snelle en goed vindbare TestCoders-website opleveren waarop een kand
 - Volledig bruikbaar op mobiel vanaf **375px** breed.
 - Contactformulier of sollicitatieformulier dat een bericht **aantoonbaar aflevert**.
 - Van klik op de startpagina tot vacaturedetail in **maximaal 2 klikken**.
+- Bestaande TestCoders-huisstijl aanhouden waar mogelijk, zodat de site er meteen uitziet als TestCoders.
 
 ---
 
@@ -66,7 +67,6 @@ Een nieuwe, snelle en goed vindbare TestCoders-website opleveren waarop een kand
 ## 5. Nice-to-Have
 - Kennisblog met categorieën en auteurs.
 - Zoekfunctie over de hele site.
-- Klantcases uitgelicht (koppeling met [Casus](./casus)).
 - [AI-chatbot](./ai-chatbot) op elke pagina.
 - Engelse taalversie.
 - Automatische synchronisatie van vacatures met het recruitmentsysteem.

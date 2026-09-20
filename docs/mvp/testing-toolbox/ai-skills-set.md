@@ -1,14 +1,14 @@
 ---
-title: Set aan AI-skills
-description: Herbruikbare AI-skills voor code review, refinement, testgeneratie, bugfixes en implementatie.
+title: Coding guidelines + AI-skills
+description: Machine-leesbare coding guidelines als fundament onder herbruikbare AI-skills voor review, testgeneratie en bugfixes.
 ---
 
-# Set aan AI-skills
+# Coding guidelines + AI-skills
 
-*Skills voor code review, refinement (user stories schrijven), testgeneratie, bugfixes en implementatie.*
+*Skills voor code review, testgeneratie en bugfixes, gebouwd op een gedeelde set machine-leesbare coding guidelines.*
 
 ## 1. Projectnaamsvermelding
-**Naam:** Set aan AI-skills voor het testvak
+**Naam:** Coding guidelines + AI-skills voor het testvak
 **Versie:** MVP 1.0
 **Datum:** [Datum]
 **Team:** [Namen van de deelnemers]
@@ -18,14 +18,14 @@ description: Herbruikbare AI-skills voor code review, refinement, testgeneratie,
 ## 2. Doelstelling
 
 ### Hoofddoel
-Een bibliotheek van vijf herbruikbare, gedocumenteerde AI-skills opleveren die een team direct in zijn eigen repository kan installeren om terugkerend werk — review, refinement, testgeneratie, bugfixes en implementatie — te versnellen.
+Een fundament van machine-leesbare coding guidelines opleveren, plus een set AI-skills die dat fundament daadwerkelijk gebruikt — zodat een AI-agent niet alleen weet hóe TestCoders code schrijft, maar dat ook automatisch toepast bij review, testgeneratie en bugfixes.
 
 ### Subdoelen
-- **5 werkende skills**, elk met een eigen instructiebestand, duidelijke triggerwoorden en minimaal 1 uitgewerkt voorbeeld.
-- Elke skill is **binnen 2 minuten** te installeren via kopiëren van een map of een install-script.
-- Elke skill is getest op minimaal **2 verschillende inputs** en levert reproduceerbare output.
-- De refinement-skill produceert user stories in vast formaat, inclusief **Gegeven/Als/Dan**-acceptatiecriteria.
-- De testgeneratie-skill levert tests die **zonder aanpassing compileren en draaien** op de voorbeeldrepo.
+- Eén `guidelines/`-map met minimaal **3 richtlijnbestanden**: naamgeving, teststructuur en foutafhandeling, elk met een **regel + goed voorbeeld + fout voorbeeld**.
+- Een `CLAUDE.md` (en/of `.cursorrules`) in de root die de richtlijnen automatisch laadt, werkend in minimaal **1 AI-tool** live in de demo.
+- **3 werkende skills** — code review, testgeneratie en bugfix — die elk expliciet naar `guidelines/` verwijzen in plaats van generieke output te geven.
+- De review-skill toetst zichtbaar aan de guidelines: bevindingen verwijzen naar de overtreden regel, niet naar smaak.
+- De testgeneratie-skill levert tests die **zonder aanpassing compileren en draaien** én de conventies uit `guidelines/` volgen (naamgeving, structuur).
 
 ---
 
@@ -33,52 +33,55 @@ Een bibliotheek van vijf herbruikbare, gedocumenteerde AI-skills opleveren die e
 
 | Rol | Beschrijving | Belangrijkste Behoeften |
 |-----|--------------|--------------------------|
-| Tester | Schrijft en onderhoudt geautomatiseerde tests | Snel testcases uit een story halen; randgevallen die je zelf vergeet |
-| Developer | Levert code op en reviewt die van anderen | Snelle eerste review-ronde; kleine bugfixes zonder contextverlies |
-| Business analist / PO | Schrijft en verfijnt user stories | Consistente stories met toetsbare acceptatiecriteria |
-| Consultant bij een klant | Werkt in wisselende codebases | Skills die overal werken, zonder installatie van een platform |
+| Tester | Schrijft en onderhoudt geautomatiseerde tests | Testcases die passen bij de bestaande stijl, niet een eigen stijl per prompt |
+| Developer | Levert code op en reviewt die van anderen | Objectieve, verwijsbare regels i.p.v. smaakdiscussies in een PR |
+| Tech lead / reviewer | Bewaakt kwaliteit over meerdere teams | Eén bron van waarheid die zowel mens als AI-agent volgt |
+| Consultant bij een klant | Werkt in wisselende codebases | Skills die overal werken zodra de guidelines-map meegaat |
 
 ---
 
 ## 4. Kernfunctionaliteiten (Must-Have)
 
-### Voor tester en developer
+### Het fundament
+✅ **Guidelines in do/don't-formaat**
+- Elke regel heeft een codeblok met een correct en een incorrect voorbeeld — bewezen effectiever voor LLM's dan proza.
+
+✅ **Automatisch laden**
+- Een `CLAUDE.md` in de repository-root verwijst naar `guidelines/`, zodat elke skill de regels meeneemt zonder dat iemand ze plakt.
+
+### De skills
 ✅ **Skill: Code review**
-- Neemt een diff of bestand en levert bevindingen als `bestand:regel — probleem — voorgestelde fix`, gesorteerd op ernst. Geen complimenten, geen scope creep.
+- Neemt een diff of bestand en levert bevindingen als `bestand:regel — probleem — voorgestelde fix`, elk gekoppeld aan de overtreden guideline waar van toepassing.
 
 ✅ **Skill: Testgeneratie**
-- Genereert vanuit een klasse, endpoint of user story een testklasse in het framework van het project, inclusief happy path, randgevallen en foutscenario's.
+- Genereert vanuit een klasse, endpoint of user story een testklasse volgens de teststructuur-guideline (naamgeving, Arrange-Act-Assert, geen `sleep`).
 
 ✅ **Skill: Bugfix**
-- Neemt een bugmelding of stacktrace, lokaliseert de vermoedelijke oorzaak, stelt een minimale fix voor en schrijft de regressietest die de bug had gevangen.
+- Neemt een bugmelding of stacktrace, lokaliseert de vermoedelijke oorzaak, stelt een minimale fix voor volgens de guidelines en schrijft de regressietest die de bug had gevangen.
 
-### Voor analist en PO
-✅ **Skill: Refinement (user stories schrijven)**
-- Zet een ruw idee om in een user story met rol, wens, waarde en Gegeven/Als/Dan-acceptatiecriteria, en benoemt expliciet de open vragen.
-
-✅ **Skill: Implementatie**
-- Werkt een goedgekeurde story uit tot een stappenplan met bestanden, volgorde en testaanpak, vóórdat er ook maar één regel code wordt geschreven.
-
-### Voor het hele team
+### Voor het team
 ✅ **Gedeelde structuur en documentatie**
 - Alle skills volgen dezelfde mapindeling en hebben een README met installatie-instructies, triggerwoorden en een voorbeeld van in- en output.
 
 ---
 
 ## 5. Nice-to-Have
-- Een zesde skill voor performance-analyse of security-review.
+- Extra skills: refinement (user stories schrijven) en implementatie, als keten na elkaar aan te roepen.
+- Uitbreiden naar 5 richtlijnbestanden (algemeen, review-checklist erbij).
+- Afdwingbare regels ook als kant-en-klare ESLint-/Checkstyle-configuratie, zodat CI ze bewaakt.
+- Werkend in minimaal 2 AI-tools i.p.v. 1.
+- Meetbare verbetering aantonen: op een vaste set opdrachten minder handmatige correcties met guidelines dan zonder.
 - Skills als installeerbare plugin distribueren in plaats van kopiëren.
-- Skills die elkaar aanroepen: refinement → implementatie → testgeneratie als keten.
 - Een evaluatieset die per skill controleert of de output nog aan de verwachting voldoet na een promptwijziging.
-- Koppeling met Jira, zodat de refinement-skill direct een ticket aanmaakt.
 
 ---
 
 ## 6. Succescriteria
 *Wat moet er aan het eind van de hackathon werkend zijn om het project als geslaagd te beschouwen?*
 
-- Alle 5 skills zijn geïnstalleerd in een demo-repository en worden live aangeroepen.
-- De testgeneratie-skill levert een test die groen draait zonder handmatige aanpassing.
-- De code review-skill vindt in een geprepareerde diff minimaal 3 van de 4 ingebouwde fouten.
-- De refinement-skill levert een story met minimaal 3 acceptatiecriteria in Gegeven/Als/Dan-vorm.
+- De `guidelines/`-map bevat minimaal 3 ingevulde bestanden, elk met een goed én een fout voorbeeld.
+- Alle 3 skills zijn geïnstalleerd in een demo-repository en worden live aangeroepen.
+- De review-skill vindt in een geprepareerde diff minimaal 3 overtredingen en noemt bij elke bevinding de guideline.
+- De testgeneratie-skill levert een test die groen draait én zichtbaar de teststructuur-guideline volgt.
+- Dezelfde prompt zonder `guidelines/` levert aantoonbaar afwijkende code op — het verschil is in de demo te tonen.
 - Een teamlid dat de skills niet gebouwd heeft, installeert en gebruikt ze succesvol binnen 5 minuten.

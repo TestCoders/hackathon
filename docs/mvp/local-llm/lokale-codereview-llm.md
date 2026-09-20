@@ -5,6 +5,10 @@ description: Codereview met een lokaal draaiend taalmodel, zonder dat code de ma
 
 # Lokale codereview-LLM
 
+::: warning Hardware vooraf regelen
+Reken op minimaal **16 GB RAM** voor een 7B-model en **32 GB** voor een 14B-model; een GPU maakt het verschil tussen seconden en minuten wachten. Download modellen **vóór de hackathon** — 5 tot 20 GB binnenhalen op hackathon-wifi kost meer tijd dan het bouwen zelf. Test vroeg op de zwakste laptop in het team, want daar wordt gedemonstreerd.
+:::
+
 ## 1. Projectnaamsvermelding
 **Naam:** Lokale codereview-LLM
 **Versie:** MVP 1.0
@@ -67,7 +71,7 @@ Een codereview-tool opleveren die volledig lokaal draait op een open-weight mode
 - Markdown-rapport per review voor archivering.
 - Integratie met de IDE in plaats van alleen de terminal.
 - Vergelijking van meerdere modellen op dezelfde diff, met kwaliteit en snelheid naast elkaar.
-- Projectspecifieke context meegeven, zoals de [coding guidelines](/mvp/testing-toolbox/coding-guidelines-ai).
+- Projectspecifieke context meegeven, zoals de [coding guidelines](/mvp/testing-toolbox/ai-skills-set).
 - Alleen de gewijzigde functies in plaats van hele bestanden naar het model sturen, om sneller te zijn.
 - Draaien als kleine service voor het hele team op één sterke machine binnen het netwerk.
 

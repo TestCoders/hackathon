@@ -25,6 +25,7 @@ Een urenregistratie opleveren waarmee een consultant zijn week in minder dan een
 - **Validatie** die waarschuwt bij meer dan 12 uur op een dag, bij een dag zonder uren in een werkweek en bij uren op een dag die nog in de toekomst ligt.
 - **Export per klant en per periode** naar CSV voor facturatie.
 - Werkend op **mobiel en desktop**.
+- Bestaande TestCoders-huisstijl aanhouden waar mogelijk, zodat de demo er meteen uitziet als TestCoders.
 
 ---
 

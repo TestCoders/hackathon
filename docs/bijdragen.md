@@ -47,11 +47,11 @@ description: Eén zin over wat dit MVP oplevert.
 { text: 'Mijn onderwerp', link: '/mvp/testing-toolbox/mijn-onderwerp' }
 ```
 
-5. Zet het onderwerp ook in de tabel op de overzichtspagina van de categorie én in [docs/mvp/index.md](https://github.com/TestCoders/hackathon/blob/main/docs/mvp/index.md).
+5. Zet het onderwerp ook in de tabel in [docs/mvp/index.md](https://github.com/TestCoders/hackathon/blob/main/docs/mvp/index.md).
 
 ## Een nieuwe categorie toevoegen
 
-Maak een map onder `docs/mvp/`, geef die een `index.md` met een korte introductie en een tabel van de onderwerpen, en voeg een nieuw sidebar-blok toe in de config. Voeg de categorie daarna toe aan de `features`-lijst op de [homepage](https://github.com/TestCoders/hackathon/blob/main/docs/index.md).
+Categorieën hebben bewust geen eigen `index.md` met introductietekst en tabel — dat was dubbel werk naast [docs/mvp/index.md](https://github.com/TestCoders/hackathon/blob/main/docs/mvp/index.md) en werd niet gelezen. Maak in plaats daarvan een map onder `docs/mvp/` voor de topic-bestanden, voeg een tabel-sectie toe op `docs/mvp/index.md`, een nieuw sidebar-blok in de config, en de categorie aan de `features`-lijst op de [homepage](https://github.com/TestCoders/hackathon/blob/main/docs/index.md).
 
 ## Publiceren
 
