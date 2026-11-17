@@ -41,6 +41,7 @@ Gereedschap voor testers en developers.
 - [Browser plugin voor locators](docs/mvp/testing-toolbox/browser-plugin-locators.md)
 - [Testdatagenerator](docs/mvp/testing-toolbox/testdatagenerator.md)
 - [AI testpipeline / agent tool](docs/mvp/testing-toolbox/ai-testpipeline.md)
+- [Test(Re)Coder](docs/mvp/testing-toolbox/test-recoder.md)
 
 ### Iets bouwen voor TestCoders
 

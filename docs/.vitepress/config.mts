@@ -36,7 +36,8 @@ export default defineConfig({
           { text: 'Coding guidelines + AI-skills', link: '/mvp/testing-toolbox/ai-skills-set' },
           { text: 'Browser plugin voor locators', link: '/mvp/testing-toolbox/browser-plugin-locators' },
           { text: 'Testdatagenerator', link: '/mvp/testing-toolbox/testdatagenerator' },
-          { text: 'AI testpipeline / agent tool', link: '/mvp/testing-toolbox/ai-testpipeline' }
+          { text: 'AI testpipeline / agent tool', link: '/mvp/testing-toolbox/ai-testpipeline' },
+          { text: 'Test(Re)Coder', link: '/mvp/testing-toolbox/test-recoder' }
         ]
       },
       {
