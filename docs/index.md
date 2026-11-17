@@ -24,7 +24,7 @@ features:
     link: /mvp/#testing-toolbox
     linkText: Bekijk onderwerpen
   - title: Iets bouwen voor TestCoders
-    details: Interne tooling en de eigen website — declaratie-app, de sollicitatiecasus, urenregistratie en een AI-chatbot.
+    details: Interne tooling en de eigen website — declaratie-app, de sollicitatiecasus met een review-agent, urenregistratie en een AI-chatbot.
     link: /mvp/#iets-bouwen-voor-testcoders
     linkText: Bekijk onderwerpen
   - title: Framework from scratch

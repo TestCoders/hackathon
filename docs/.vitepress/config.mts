@@ -47,6 +47,7 @@ export default defineConfig({
           { text: 'Declaratie-app', link: '/mvp/testcoders/declaratie-app' },
           { text: 'Website', link: '/mvp/testcoders/website' },
           { text: 'Casus', link: '/mvp/testcoders/casus' },
+          { text: 'Casus-review-agent', link: '/mvp/testcoders/casus-review-agent' },
           { text: 'Uren', link: '/mvp/testcoders/uren' },
           { text: 'AI-chatbot voor de website', link: '/mvp/testcoders/ai-chatbot' }
         ]

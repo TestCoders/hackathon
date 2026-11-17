@@ -21,7 +21,7 @@ De bestaande casus-website/API — de technische instapopdracht waar sollicitant
 ### Subdoelen
 - Minimaal **3 concrete technische verbeteringen** doorvoeren (bijvoorbeeld een verouderde dependency, een kapotte flow of ontbrekende validatie) die nu de opdracht onnodig lastig of gedateerd maken.
 - Minimaal **3 onderdelen "AI-proof" maken**: randgevallen, ambiguë requirements of niet-triviale bedrijfslogica toevoegen, zodat alleen een prompt sturen niet automatisch tot een volledige, correcte oplossing leidt.
-- Een **beoordelingsrubriek** met minimaal 5 meetbare criteria waarmee een beoordelaar een inzending objectief kan scoren.
+- Een **beoordelingsrubriek** met minimaal 5 meetbare criteria waarmee een beoordelaar een inzending objectief kan scoren. Een concept staat bij de [Casus-review-agent](./casus-review-agent#_7-concept-rubriek); die gebruikt dezelfde rubriek.
 - Een **referentie-oplossing** die zelf aan de eigen rubriek voldoet.
 - Een kandidaatomgeving die binnen **5 minuten** opnieuw en schoon is op te zetten.
 - De opdracht blijft binnen dezelfde tijdsindicatie als nu haalbaar voor een kandidaat — "AI-proof" maken mag de opdracht niet zwaarder maken, alleen minder omzeilbaar.
@@ -62,7 +62,7 @@ De bestaande casus-website/API — de technische instapopdracht waar sollicitant
 ---
 
 ## 5. Nice-to-Have
-- Automatische eerste-check van een inzending (lint, build, basisrun) vóórdat een beoordelaar ernaar kijkt.
+- Automatische eerste-check van een inzending (lint, build, basisrun) vóórdat een beoordelaar ernaar kijkt — uitgewerkt als eigen onderwerp in de [Casus-review-agent](./casus-review-agent).
 - Meerdere casus-varianten om onderling doorspelen tussen kandidaten te bemoeilijken.
 - Metrics over waar kandidaten vastlopen, als signaal of de casus nog goed gekalibreerd is.
 - Geanonimiseerd loggen of en welke AI-tools kandidaten inzetten, als gespreksstof bij het interview.

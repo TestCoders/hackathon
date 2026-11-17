@@ -30,10 +30,11 @@ Interne tooling en de eigen online aanwezigheid van TestCoders.
 | [Declaratie-app](/mvp/testcoders/declaratie-app) | Onkosten declareren vanaf je telefoon, met bonfoto en OCR |
 | [Website](/mvp/testcoders/website) | Nieuwe TestCoders-website met vacatures en kennisartikelen |
 | [Casus](/mvp/testcoders/casus) | Interne technische instapopdracht voor sollicitanten, gemoderniseerd en AI-proof gemaakt |
+| [Casus-review-agent](/mvp/testcoders/casus-review-agent) | AI-agent die elke casus-inzending op dezelfde, objectieve manier beoordeelt, als aanvulling op de beoordelaars |
 | [Uren](/mvp/testcoders/uren) | Urenregistratie die in seconden klaar is in plaats van minuten |
 | [AI-chatbot voor de website](/mvp/testcoders/ai-chatbot) | Chatbot die bezoekersvragen beantwoordt op basis van de eigen content |
 
-**Samenhang:** Declaratie-app en Uren delen dezelfde kern (medewerker, klant/opdracht, periode) — spreek bij parallelle teams één datamodel af. Website en AI-chatbot delen dezelfde contentbron — zet die vroeg op de dag vast.
+**Samenhang:** Declaratie-app en Uren delen dezelfde kern (medewerker, klant/opdracht, periode) — spreek bij parallelle teams één datamodel af. Website en AI-chatbot delen dezelfde contentbron — zet die vroeg op de dag vast. Casus en Casus-review-agent delen de beoordelingsrubriek — leg het formaat daarvan bij de kick-off vast.
 
 ## Framework from scratch
 
