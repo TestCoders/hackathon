@@ -17,6 +17,7 @@ Gereedschap dat testers en developers direct in hun dagelijkse werk kunnen gebru
 | [Browser plugin voor locators](/mvp/testing-toolbox/browser-plugin-locators) | Browserextensie die stabiele locators genereert en naar je clipboard schrijft |
 | [Testdatagenerator](/mvp/testing-toolbox/testdatagenerator) | Realistische, geldige NL-testdata op basis van een schema of een aangeleverd format |
 | [AI testpipeline / agent tool](/mvp/testing-toolbox/ai-testpipeline) | Keten van AI-skills die het testproces van ticket tot rapport structureert, herbruikbaar in elk project |
+| [Test(Re)Coder](/mvp/testing-toolbox/test-recoder) | AI-agents analyseren een bestaande testsuite en bouwen een klein onderdeel opnieuw op als moderne testautomatisering |
 
 **Samenhang:** testdatagenerator en browser-plugin leveren input voor de tests die de AI-testpipeline verwerkt. Bouw je meerdere van deze onderwerpen op dezelfde dag, spreek dan bij de kick-off een gedeeld voorbeeldproject af (zie [dagprogramma](/dagprogramma)).
 
