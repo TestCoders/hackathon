@@ -68,7 +68,7 @@ Dezelfde testcase in meerdere testtools bouwen en op vaste, meetbare criteria ve
 - Metingen automatisch in CI draaien, zodat de vergelijking actueel blijft bij nieuwe tool-versies.
 - Ook AI-ondersteuning per tool meewegen: hoeveel helpt een agent binnen dit framework?
 - Kosten meenemen: licenties, CI-minuten, benodigde infrastructuur.
-- Publiceren als artikel op de [TestCoders-website](/mvp/testcoders/website).
+- Publiceren als artikel op de TestCoders-website.
 - Leercurve meten met een tester die de tool nog niet kent.
 
 ---

@@ -48,7 +48,6 @@ Gereedschap voor testers en developers.
 Interne tooling en de eigen website.
 
 - [Declaratie-app](docs/mvp/testcoders/declaratie-app.md)
-- [Website](docs/mvp/testcoders/website.md)
 - [Casus](docs/mvp/testcoders/casus.md)
 - [Casus-review-agent](docs/mvp/testcoders/casus-review-agent.md)
 - [Uren](docs/mvp/testcoders/uren.md)
