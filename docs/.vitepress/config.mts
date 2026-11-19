@@ -14,6 +14,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Dagprogramma', link: '/dagprogramma' },
       { text: 'MVP-overzicht', link: '/mvp/' },
+      { text: 'De prijs', link: '/prijs' },
       { text: 'Template', link: '/template' },
       { text: 'Bijdragen', link: '/bijdragen' }
     ],
@@ -25,6 +26,7 @@ export default defineConfig({
           { text: 'Introductie', link: '/' },
           { text: 'Dagprogramma', link: '/dagprogramma' },
           { text: 'MVP-overzicht', link: '/mvp/' },
+          { text: 'De prijs', link: '/prijs' },
           { text: 'MVP Template', link: '/template' },
           { text: 'Bijdragen', link: '/bijdragen' }
         ]

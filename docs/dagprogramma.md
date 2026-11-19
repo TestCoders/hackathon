@@ -21,7 +21,7 @@ Werk in teams van drie personen een onderwerp uit tot een werkend MVP. AI-agents
 | 13.30–15.45 | **Sprint 2 – verbeteren en afronden** | Feedback verwerken, het MVP afronden en de einddemo voorbereiden. |
 | 15.45–16.00 | **Wrap-up** | Werk veiligstellen, de MVP-pagina afronden en de einddemo gereedmaken. |
 | 16.00–16.45 | **Demo's en vervolgstappen** | Ieder team geeft een demo van maximaal vier minuten en benoemt wat nodig is om het resultaat verder te brengen. |
-| 16.45–17.00 | **Afsluiting** | Bekendmaking van het winnende team en gezamenlijke afsluiting. |
+| 16.45–17.00 | **Afsluiting** | Live publieksstemming, bekendmaking van het winnende team en gezamenlijke afsluiting. De winnaars ontvangen ieder [€20 aan AI-tokens](/prijs). |
 
 ::: tip Bouwtijd
 De twee sprints tellen samen op tot de **4 uur bouwtijd met 3 personen** waarop elk MVP op deze site is geknipt (zie het [MVP-overzicht](/mvp/)).
