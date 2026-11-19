@@ -5,6 +5,12 @@ description: Alle hackathon-onderwerpen per categorie, elk uitgewerkt volgens he
 
 # MVP-overzicht
 
+<script setup>
+import HackathonPrize from '../.vitepress/components/HackathonPrize.vue'
+</script>
+
+<HackathonPrize compact />
+
 Elk onderwerp hieronder is een zelfstandig hackathon-project, uitgewerkt volgens het [MVP-template](/template). Alle scopes zijn geknipt op **4 uur bouwtijd met 3 personen**, AI-agenten inbegrepen.
 
 ## Testing toolbox
