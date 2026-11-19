@@ -52,6 +52,7 @@ Interne tooling en de eigen website.
 - [Casus-review-agent](docs/mvp/testcoders/casus-review-agent.md)
 - [Uren](docs/mvp/testcoders/uren.md)
 - [AI-chatbot voor de website](docs/mvp/testcoders/ai-chatbot.md)
+- [Interactief CV](docs/mvp/testcoders/interactief-cv.md)
 
 ### Framework from scratch
 

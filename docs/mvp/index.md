@@ -32,6 +32,7 @@ Interne tooling en de eigen online aanwezigheid van TestCoders.
 | [Casus-review-agent](/mvp/testcoders/casus-review-agent) | AI-agent die elke casus-inzending op dezelfde, objectieve manier beoordeelt, als aanvulling op de beoordelaars |
 | [Uren](/mvp/testcoders/uren) | Urenregistratie die in seconden klaar is in plaats van minuten |
 | [AI-chatbot voor de website](/mvp/testcoders/ai-chatbot) | Chatbot die bezoekersvragen beantwoordt op basis van de eigen content |
+| [Interactief CV](/mvp/testcoders/interactief-cv) | Het TestCoders-CV als speelbare side scroller in de browser |
 
 **Samenhang:** Declaratie-app en Uren delen dezelfde kern (medewerker, klant/opdracht, periode) — spreek bij parallelle teams één datamodel af. Casus en Casus-review-agent delen de beoordelingsrubriek — leg het formaat daarvan bij de kick-off vast.
 
