@@ -11,9 +11,9 @@ const pdf = withBase('/prijzen/TestCoders_Tokens_of_Glory.pdf')
       <p class="prize-command">&gt; achievement unlocked</p>
       <h2>Tokens of Glory<span>.</span></h2>
       <p class="prize-tagline">Menselijke genialiteit. Kunstmatig beloond.</p>
-      <p>Het team met de meeste publieksstemmen krijgt <strong>€20 per persoon</strong> aan tokens voor een AI-model naar keuze. Meer tokens. Minder “limiet bereikt”.</p>
+      <p>Na de demo's stemt het publiek live. Het team met de meeste stemmen krijgt <strong>€20 per persoon</strong> aan tokens voor een AI-model naar keuze. Meer tokens. Minder “limiet bereikt”.</p>
       <div class="prize-actions">
-        <a class="prize-button" :href="compact ? withBase('/stemmen') : '#voting-title'">Stem op je favoriet</a>
+        <a v-if="compact" class="prize-button" :href="withBase('/prijs')">Zo win je de prijs</a>
         <a class="prize-download" :href="pdf" target="_blank" rel="noopener">Bekijk de prijsbon (PDF)</a>
       </div>
     </div>

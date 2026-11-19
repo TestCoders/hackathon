@@ -51,6 +51,7 @@ features:
 - **Teamgrootte:** 3 personen per team, met AI-agenten als extra "teamleden".
 - **Scope:** alles wat op deze site staat is een *Minimum* Viable Product. Bouw de must-haves, laat de nice-to-haves los.
 - **Eindresultaat:** een demo van maximaal 4 minuten plus de ingevulde MVP-pagina op deze site.
+- **De prijs:** het publiek stemt live na de demo's. Ieder lid van het winnende team krijgt [€20 aan AI-tokens](/prijs).
 - **Echte data:** gebruik nooit echte klant- of personeelsgegevens in een demo — gebruik verzonnen data, bijvoorbeeld uit de [testdatagenerator](/mvp/testing-toolbox/testdatagenerator).
 - **Eigenaarschap:** spreek bij oplevering af wie na de hackathon eigenaar wordt van wat blijft draaien.
 
