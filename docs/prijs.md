@@ -3,21 +3,19 @@ title: De prijs
 description: 'Tokens of Glory: €20 aan AI-tokens voor ieder lid van het team dat de live publieksstemming wint.'
 ---
 
-<script setup>
-import HackathonPrize from './.vitepress/components/HackathonPrize.vue'
-</script>
-
 # De prijs: Tokens of Glory
 
-Van “wat als…” naar een demo. Daarna is het tijd voor het applaus, de stemmen en de eeuwige roem. Nou ja, in ieder geval tot de volgende hackathon.
+**Menselijke genialiteit. Kunstmatig beloond.** Ieder lid van het winnende team ontvangt **€20 aan tokens** voor een AI-model naar keuze.
 
-<HackathonPrize />
+[![Tokens of Glory: de TestCoders-prijsbon van €20 aan AI-tokens per persoon, met invulvelden voor winnaar, team en datum](/prijzen/prijsbon.png)](/prijzen/TestCoders_Tokens_of_Glory.pdf)
+
+*Klik op de prijsbon om de PDF te openen. Elk winnend teamlid krijgt een eigen, ingevulde bon.*
 
 ## Zo wordt de winnaar gekozen
 
-- **Het publiek kiest.** Na de demo's stemt iedereen live tijdens de [afsluiting](/dagprogramma#programma) op zijn of haar favoriete project.
+- **Het publiek kiest.** Na de demo's stemt iedereen live tijdens de [afsluiting](/dagprogramma#programma).
 - **Eén stem per persoon.** Kies het project dat jou het meest heeft overtuigd: een slimme oplossing, een verrassend idee of iets dat je morgen al wilt gebruiken.
-- **Meeste stemmen wint.** Ieder lid van het winnende team ontvangt **€20 aan tokens** voor een AI-model naar keuze, met een eigen [prijsbon](/prijzen/TestCoders_Tokens_of_Glory.pdf){target="_blank"}.
+- **Meeste stemmen wint.** Het team met de meeste stemmen wint de Tokens of Glory.
 
 *Je AI mag adviseren. De stem is van jou.*
 

@@ -5,11 +5,9 @@ description: Alle hackathon-onderwerpen per categorie, elk uitgewerkt volgens he
 
 # MVP-overzicht
 
-<script setup>
-import HackathonPrize from '../.vitepress/components/HackathonPrize.vue'
-</script>
-
-<HackathonPrize compact />
+::: tip 🏆 Tokens of Glory
+Het publiek stemt live na de demo's. Ieder lid van het winnende team krijgt **€20 aan AI-tokens** voor een model naar keuze. [Zo werkt het](/prijs)
+:::
 
 Elk onderwerp hieronder is een zelfstandig hackathon-project, uitgewerkt volgens het [MVP-template](/template). Alle scopes zijn geknipt op **4 uur bouwtijd met 3 personen**, AI-agenten inbegrepen.
 
